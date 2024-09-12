@@ -1,0 +1,15 @@
+INSERT DATA QUERY
+
+INSERT INTO STUDENT (NAME, ADDRESS, DOB, CONTACT_INFO, ENROL_DATE, GRADE_LEVEL, ACAD_RECORDS, A_ID) VALUES
+('Ankeet', '123 ABC St', '2003-05-2', 'ankeet@gmail.com', '2024-02-16', '10', 'A+', 1),
+('Tanveer', '456 XYZ St', '2004-08-17', 'tanveer@gmail.com', '2024-02-6', '9', 'B', 2),
+('Roshan', '789 PQR St', '2002-9-9', 'roshan@gmail.com', '2024-02-6', '8', 'A', 3),
+('Mangpreet', '987 TUV St', '2004-10-22', 'mangpreet@gmail.com', '2024-02-8', '10', 'B+', 4),
+('Shubham', '543 MNO St', '2003-1-30', 'shubham@gmail.com', '2024-02-7', '9', 'A-', 5);
+
+INSERT INTO TEACHER (NAME, ADDRESS, SUB_EXPERT, CONTACT_INFO, PROF_DETAIL, A_ID) VALUES
+('Ashanthika', '12 black St', 'Mathematics', 'ashanthika@gmail.com', 'PhD in Mathematics', 1),
+('Waruni', '34 white St', 'Science', 'waruni@gmail.com', 'MSc in Physics', 2),
+('Berry', '56 red St', 'English', 'berry@gmail.com', 'MA in English Literature', 3),
+('William', '78 blue St', 'History', 'willaim@gmail.com', 'MA in History', 4),
+('Ganeshan', '90 purple St', 'Computer Science', 'ganeshan@gmail.com', 'MSc in Computer Science', 5);

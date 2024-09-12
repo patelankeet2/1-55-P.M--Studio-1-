@@ -1,0 +1,91 @@
+USE CASES QUERY
+
+Use-case1:
+--> insert student info
+INSERT INTO STUDENT (NAME, ADDRESS, DOB, CONTACT_INFO, ENROL_DATE, GRADE_LEVEL, ACAD_RECORDS, A_ID)
+VALUES ('John Doe', '789 New Street', '2005-05-05', 'john@example.com', '2024-03-01', '8', 'B+', 1);
+
+--> update existing student info
+UPDATE STUDENT
+SET GRADE_LEVEL = '10', ACAD_RECORDS = 'A'
+WHERE ID = 1;  -- Change the ID to the student's ID
+
+Use case2:
+--> Enrol student in classes
+UPDATE STUDENT
+SET GRADE_LEVEL = '10', ACAD_RECORDS = 'A'
+WHERE ID = 1;  -- Change the ID to the student's ID
+
+Use Case3:
+-->view class schedules for students
+SELECT CLASS.NAME, CLASS.SCHEDULE, TEACHER.NAME AS TEACHER_NAME
+FROM ENROLMENT
+JOIN CLASS ON ENROLMENT.CLASS_ID = CLASS.ID
+JOIN TEACHER ON CLASS.T_ASSIGN = TEACHER.ID
+WHERE ENROLMENT.S_ID = 1;  -- S_ID = Student ID
+
+Use Case4:
+-->check grade for student
+SELECT GRADE.GRADE, GRADE.REMARK, SUBJECT.SUB_NAME, CLASS.NAME AS CLASS_NAME, TEACHER.NAME AS TEACHER_NAME
+FROM GRADE
+JOIN SUBJECT ON GRADE.SUB_ID = SUBJECT.ID
+JOIN CLASS ON GRADE.CLASS_ID = CLASS.ID
+JOIN TEACHER ON GRADE.T_ID = TEACHER.ID
+WHERE GRADE.S_ID = 1;  -- S_ID = Student ID
+
+Use Case5:
+--> insert new grades
+INSERT INTO GRADE (GRADE, REMARK, T_ID, S_ID, CLASS_ID, SUB_ID)
+VALUES('B+', 'Good performance', 2, 2, 2, 2);  -- T_ID = Teacher ID, S_ID = Student ID, etc.
+
+-->update existing student grades
+UPDATE GRADE
+SET GRADE = 'A', REMARK = 'Excellent'
+WHERE S_ID = 2 AND CLASS_ID = 2 AND SUB_ID = 2;
+
+Use Case6:
+-->update class schedule
+UPDATE CLASS
+SET SCHEDULE = 'Mon-Fri 9:00AM - 1:00PM'
+WHERE ID = 1;  -- Class ID
+
+Use Case7:
+-->assign teacher to class
+UPDATE CLASS
+SET T_ASSIGN = 3  -- Teacher ID
+WHERE ID = 2;  -- Class ID
+
+Use Case8:Track fee status
+-->view student fee payment status
+SELECT STUDENT.NAME, FEES.AMOUNT, FEES.DUE_DATE, FEES.STATUS
+FROM FEES
+JOIN STUDENT ON FEES.S_ID = STUDENT.ID
+WHERE FEES.STATUS = 'unpaid';
+
+Use Case9:view fee detail
+-->view the student fee details
+SELECT AMOUNT, DUE_DATE, STATUS
+FROM FEES
+WHERE S_ID = 1;  -- S_ID = Student ID
+
+Use Case10:
+-->assign role to admin
+UPDATE ADMIN
+SET ROLE = 'Administrator'
+WHERE ID = 5;  -- Admin ID
+
+Use Case11:
+-->Add a new subject
+INSERT INTO SUBJECT (SUB_NAME, T_ID)
+VALUES ('Chemistry', 2);  -- T_ID = Teacher ID
+
+-->update existing subject
+UPDATE SUBJECT
+SET SUB_NAME = 'Advanced Mathematics'
+WHERE ID = 1;  -- Subject ID
+
+Use Cases12:
+--> update teacher professional details
+UPDATE TEACHER
+SET CONTACT_INFO = 'newemail@example.com', PROF_DETAIL = 'PhD in Physics'
+WHERE ID = 2;  -- Teacher ID
