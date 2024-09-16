@@ -1,0 +1,16 @@
+INSERT INTO ADMIN (NAME, ROLE, CONTACT_INFO) VALUES
+('Roy', 'Principal', 'roy@gmail.com'),
+('Anthony', 'Vice Principal', 'anthony@gmail.com'),
+('warner', 'Admin Officer', 'warner@gmail.com'),
+('Williamson', 'Counselor', 'williamson@gmail.com'),
+('Martin', 'Administrator', 'martin@gmail.com');
+INSERT INTO FEES (AMOUNT, DUE_DATE, STATUS,... by Ankeet Patel (1000121663)
+Ankeet Patel (1000121663)
+Yesterday 12:00 AM
+INSERT INTO FEES (AMOUNT, DUE_DATE, STATUS, S_ID) VALUES
+(1000, '2024-03-01', 'Paid', 1),
+(200, '2024-03-15', 'unpaid', 2),
+(2000, '2024-04-01', 'Paid', 3),
+(300, '2024-04-10', 'unpaid', 4),
+(3000, '2024-04-25', 'Paid', 5);
+has context menu
